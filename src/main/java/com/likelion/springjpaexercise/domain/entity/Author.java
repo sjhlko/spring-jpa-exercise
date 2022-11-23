@@ -13,6 +13,6 @@ import javax.persistence.Id;
 @NoArgsConstructor
 public class Author {
     @Id
-    private Long id;
+    private Integer id;
     private String name;
 }

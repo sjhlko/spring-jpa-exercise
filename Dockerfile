@@ -15,7 +15,7 @@ FROM openjdk:11.0-slim
 WORKDIR /app
 
 # 빌더 이미지에서 jar 파일만 복사
-COPY --from=builder /build/build/libs/springboot-mustache-0.0.1-SNAPSHOT.jar .
+COPY --from=builder /build/build/libs/spring-jpa-exercise-0.0.1-SNAPSHOT.jar .
 
 
 EXPOSE 8080
@@ -27,5 +27,5 @@ ENTRYPOINT [                                                \
    "-jar",                                                 \
    "-Djava.security.egd=file:/dev/./urandom",              \
    "-Dsun.net.inetaddr.ttl=0",                             \
-   "springboot-mustache-0.0.1-SNAPSHOT.jar"              \
+   "spring-jpa-exercise-0.0.1-SNAPSHOT.jar"              \
 ]
